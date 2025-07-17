@@ -18,18 +18,11 @@
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(".fade-in");
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      elements.forEach(el => observer.observe(el));
+      const els = document.querySelectorAll(".fade-in");
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+      }, { threshold: 0.1 });
+      els.forEach(el => obs.observe(el));
     });
   </script>
 </head>
@@ -46,7 +39,7 @@
 
   <!-- Hero Section -->
   <section class="grid md:grid-cols-2 gap-6 p-6 md:p-10 items-center bg-gray-50">
-    <img src="https://images.unsplash.com/photo-1581093588401-2f1b59b1a38e" alt="Flooring Work" class="rounded-2xl shadow-lg h-64 md:h-full object-cover fade-in" />
+    <img src="https://images.pexels.com/photos/4813586/pexels-photo-4813586.jpeg" alt="Wood floor installation" class="rounded-2xl shadow-lg h-64 md:h-full object-cover fade-in" />
     <div class="fade-in">
       <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
       <ul class="list-disc list-inside text-gray-700 space-y-2">
@@ -63,7 +56,7 @@
     <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden fade-in">
-        <img src="https://images.unsplash.com/photo-1622140952243-79dfd7806f49" alt="Installation" class="w-full h-48 object-cover" />
+        <img src="https://images.pexels.com/photos/13711724/pexels-photo-13711724.jpeg" alt="Floor installation" class="w-full h-48 object-cover" />
         <div class="p-4">
           <h3 class="font-semibold text-lg mb-1">Floor Installation</h3>
           <p class="text-sm text-gray-600">We install hardwood, vinyl, tile and laminate with precision and care.</p>
@@ -71,7 +64,7 @@
       </div>
 
       <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden fade-in">
-        <img src="https://images.unsplash.com/photo-1572722132033-75d124b4c2a2" alt="Repair" class="w-full h-48 object-cover" />
+        <img src="https://images.pexels.com/photos/5768206/pexels-photo-5768206.jpeg" alt="Floor repair tools" class="w-full h-48 object-cover" />
         <div class="p-4">
           <h3 class="font-semibold text-lg mb-1">Floor Repair</h3>
           <p class="text-sm text-gray-600">Fixing damaged, warped or noisy floors with expert techniques.</p>
@@ -79,7 +72,7 @@
       </div>
 
       <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden fade-in">
-        <img src="https://images.unsplash.com/photo-1599602273172-6d2a6b1829bb" alt="Refinishing" class="w-full h-48 object-cover" />
+        <img src="https://images.pexels.com/photos/633844/pexels-photo-633844.jpeg" alt="Refinishing hardwood" class="w-full h-48 object-cover" />
         <div class="p-4">
           <h3 class="font-semibold text-lg mb-1">Floor Refinishing</h3>
           <p class="text-sm text-gray-600">Give your wood floors a fresh, long-lasting look with our refinishing.</p>
@@ -91,18 +84,14 @@
   <!-- Contact / Quote -->
   <section id="quote" class="text-center p-6 md:p-10 bg-gray-100 fade-in">
     <h2 class="text-2xl font-bold mb-4">Need a Custom Quote?</h2>
-    <p class="mb-6 text-gray-700 max-w-xl mx-auto">
-      Tell us about your flooring project – from new installations to complete renovations.
-    </p>
+    <p class="mb-6 text-gray-700 max-w-xl mx-auto">Tell us about your flooring project – from new installations to complete renovations.</p>
     <a href="mailto:your-email@example.com?subject=Flooring%20Quote%20Request" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-4 rounded-2xl shadow-xl transition">
       Schedule a Consultation
     </a>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center p-4 text-gray-500 text-sm">
-    &copy; 2025 ProFloor Experts. All rights reserved.
-  </footer>
+  <footer class="text-center p-4 text-gray-500 text-sm">&copy; 2025 ProFloor Experts. All rights reserved.</footer>
 
 </body>
 </html>
