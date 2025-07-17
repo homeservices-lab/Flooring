@@ -1,113 +1,108 @@
-
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Astrologisches Horoskop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet" />
+  <title>Premium Flooring Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Raleway', sans-serif;
-      background: #fff9f0;
-      color: #2c2c2c;
-      line-height: 1.6;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
-    header {
-      background: url('https://archive.org/download/astrologie-header/sternenhimmel.jpg') center/cover no-repeat;
-      padding: 100px 20px;
-      text-align: center;
-      color: #fff;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .image-block img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #d47a00;
-      font-size: 1.8em;
-      margin: 20px 0 10px;
-    }
-    p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
-    }
-    .cta-button {
-      display: inline-block;
-      background: #ff9900;
-      color: #fff;
-      padding: 14px 30px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .cta-button:hover {
-      background: #e68100;
-    }
-    footer {
-      background: #f1f1f1;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9em;
-      color: #666;
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
 
-<header>
-  <h1>Dein persönliches Horoskop wartet</h1>
-  <p>Erfahre heute, was die Sterne über deine Zukunft verraten 🌟</p>
-</header>
+  <!-- Header -->
+  <header class="text-center p-6 md:p-10 bg-white">
+    <h1 class="text-3xl md:text-5xl font-bold fade-in">Premium Flooring Solutions</h1>
+    <p class="mt-4 text-gray-700 fade-in">Installation, Repair & Custom Floor Services for Homes & Businesses</p>
+    <a href="#quote" class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-2xl shadow-lg transition">
+      Get a Free Quote
+    </a>
+  </header>
 
-<section>
-  <div class="image-block">
-    <img src="https://archive.org/download/astrologie.germany/horoskop_zodiac.jpg" alt="Zodiac Zeichen" />
-  </div>
-  <h2>Was verrät dein Sternzeichen?</h2>
-  <p>Erkenne deine Stärken, Talente und versteckten Potenziale anhand deines Sternzeichens. Die Sterne lügen nie!</p>
-</section>
+  <!-- Hero Section -->
+  <section class="grid md:grid-cols-2 gap-6 p-6 md:p-10 items-center bg-gray-50">
+    <img src="https://images.unsplash.com/photo-1581093588401-2f1b59b1a38e" alt="Flooring Work" class="rounded-2xl shadow-lg h-64 md:h-full object-cover fade-in" />
+    <div class="fade-in">
+      <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Expert Installation & Custom Finishing</li>
+        <li>Hardwood, Laminate, Vinyl & Tile</li>
+        <li>Repair, Refinishing & Maintenance</li>
+        <li>Fast Turnaround, Professional Support</li>
+      </ul>
+    </div>
+  </section>
 
-<section>
-  <div class="image-block">
-    <img src="https://archive.org/download/astrologie.germany/kompatibilitaet.jpg" alt="Sternzeichen Kompatibilität" />
-  </div>
-  <h2>Wer passt wirklich zu dir?</h2>
-  <p>Liebe oder Konflikt? Finde heraus, welche Zeichen wirklich mit deinem harmonieren – astrologisch geprüft.</p>
-</section>
+  <!-- Services -->
+  <section class="bg-white p-6 md:p-10">
+    <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden fade-in">
+        <img src="https://images.unsplash.com/photo-1622140952243-79dfd7806f49" alt="Installation" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-1">Floor Installation</h3>
+          <p class="text-sm text-gray-600">We install hardwood, vinyl, tile and laminate with precision and care.</p>
+        </div>
+      </div>
 
-<section>
-  <div class="image-block">
-    <img src="https://archive.org/download/astrologie.germany/sternkarte.jpg" alt="Tägliche Prognosen" />
-  </div>
-  <h2>Deine täglichen Vorhersagen</h2>
-  <p>Unsere Analyse zeigt dir die kosmische Energie deines Tages. Nutze sie, um dein Schicksal zu gestalten.</p>
-  <a href="https://your-partner-offer-link.com" class="cta-button">Jetzt Horoskop erhalten</a>
-</section>
+      <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden fade-in">
+        <img src="https://images.unsplash.com/photo-1572722132033-75d124b4c2a2" alt="Repair" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-1">Floor Repair</h3>
+          <p class="text-sm text-gray-600">Fixing damaged, warped or noisy floors with expert techniques.</p>
+        </div>
+      </div>
 
-<footer>
-  <p>© 2025 Astrologie & Horoskop Portal – Deine Zukunft beginnt jetzt.</p>
-</footer>
+      <div class="bg-gray-50 rounded-2xl shadow-lg overflow-hidden fade-in">
+        <img src="https://images.unsplash.com/photo-1599602273172-6d2a6b1829bb" alt="Refinishing" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-1">Floor Refinishing</h3>
+          <p class="text-sm text-gray-600">Give your wood floors a fresh, long-lasting look with our refinishing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Quote -->
+  <section id="quote" class="text-center p-6 md:p-10 bg-gray-100 fade-in">
+    <h2 class="text-2xl font-bold mb-4">Need a Custom Quote?</h2>
+    <p class="mb-6 text-gray-700 max-w-xl mx-auto">
+      Tell us about your flooring project – from new installations to complete renovations.
+    </p>
+    <a href="mailto:your-email@example.com?subject=Flooring%20Quote%20Request" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-4 rounded-2xl shadow-xl transition">
+      Schedule a Consultation
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 text-gray-500 text-sm">
+    &copy; 2025 ProFloor Experts. All rights reserved.
+  </footer>
 
 </body>
 </html>
