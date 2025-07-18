@@ -3,98 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Premium Flooring Services</title>
+  <title>Flooring Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const els = document.querySelectorAll(".fade-in");
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      }, { threshold: 0.1 });
-      els.forEach(el => obs.observe(el));
-    });
-  </script>
 </head>
-<body class="bg-gray-100 text-gray-900">
-
-  <!-- Header -->
-  <header class="text-center p-6 md:p-10 bg-white">
-    <h1 class="text-3xl md:text-5xl font-bold fade-in">🏡 Premium Flooring Solutions</h1>
-    <p class="mt-4 text-gray-700 fade-in">Installation, Repair & Custom Floor Services for Homes & Businesses</p>
-    <a href="#quote" class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-2xl shadow-lg transition">
-      Get a Free Quote
-    </a>
+<body class="bg-white text-gray-900">
+  <header class="bg-gray-900 text-white p-4 text-center text-xl font-bold">
+    Professional Flooring Installation
   </header>
 
-  <!-- Why Us -->
-  <section class="grid md:grid-cols-2 gap-6 p-6 md:p-10 items-center bg-gray-50">
-    <div class="text-6xl text-center md:text-left fade-in">🏠</div>
-    <div class="fade-in">
-      <h2 class="text-2xl font-semibold mb-4">Why Choose Us?</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2">
-        <li>Expert Installation & Custom Finishing</li>
-        <li>Hardwood, Laminate, Vinyl & Tile</li>
-        <li>Repair, Refinishing & Maintenance</li>
-        <li>Fast Turnaround, Professional Support</li>
+  <section class="p-6 text-center">
+    <h1 class="text-3xl font-bold mb-4">All Types of Flooring & Installation</h1>
+    <p class="max-w-xl mx-auto text-gray-700">
+      Flooring is our specialty — we are a professional flooring provider ready to realize your project of any size! Remember: the right floor, the right price, the right professionals.
+    </p>
+  </section>
+
+  <section class="grid md:grid-cols-2 gap-6 p-6">
+    <div>
+      <h2 class="text-2xl font-semibold mb-2">Our Specializations</h2>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>Solid hardwoods (exotic and domestic species)</li>
+        <li>Sanding and finishing of new or existing hardwood floors</li>
+        <li>Staircases</li>
+        <li>Engineered wood, bamboo, laminate, and vinyl</li>
+        <li>Carpet</li>
+        <li>Tile and natural stone</li>
+        <li>Granite and countertops</li>
+        <li>Residential projects</li>
+        <li>+ more!</li>
       </ul>
     </div>
-  </section>
-
-  <!-- Services -->
-  <section class="bg-white p-6 md:p-10">
-    <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <!-- Install -->
-      <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center fade-in">
-        <div class="text-5xl mb-4">🔨</div>
-        <h3 class="font-semibold text-lg mb-1">Floor Installation</h3>
-        <p class="text-sm text-gray-600">We install hardwood, vinyl, tile and laminate with precision and care.</p>
-      </div>
-
-      <!-- Repair -->
-      <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center fade-in">
-        <div class="text-5xl mb-4">🧰</div>
-        <h3 class="font-semibold text-lg mb-1">Floor Repair</h3>
-        <p class="text-sm text-gray-600">Fixing damaged, warped or noisy floors with expert techniques.</p>
-      </div>
-
-      <!-- Refinishing -->
-      <div class="bg-gray-50 rounded-2xl shadow-lg p-6 text-center fade-in">
-        <div class="text-5xl mb-4">🪚</div>
-        <h3 class="font-semibold text-lg mb-1">Floor Refinishing</h3>
-        <p class="text-sm text-gray-600">Restore the beauty of your floors with professional sanding and sealing.</p>
-      </div>
-
+    <div class="flex justify-center items-center">
+      <div class="text-7xl">🏡</div>
     </div>
   </section>
 
-  <!-- Quote -->
-  <section id="quote" class="text-center p-6 md:p-10 bg-gray-100 fade-in">
-    <h2 class="text-2xl font-bold mb-4">Need a Custom Quote?</h2>
-    <p class="mb-6 text-gray-700 max-w-xl mx-auto">
-      Tell us about your flooring project – from new installations to complete renovations.
-    </p>
-    <a href="mailto:your-email@example.com?subject=Flooring%20Quote%20Request" class="bg-blue-600 hover:bg-blue-700 text-white text-lg px-10 py-4 rounded-2xl shadow-xl transition">
-      Schedule a Consultation
-    </a>
+  <section class="p-6 text-center">
+    <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">Get a Free Quote</a>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center p-4 text-gray-500 text-sm">&copy; 2025 ProFloor Experts. All rights reserved.</footer>
-
+  <footer class="text-xs text-gray-500 p-4 border-t text-center max-w-4xl mx-auto">
+    Disclaimer: [This website] provides a free service to help homeowners connect with local service providers. All contractors/service providers are independent and [this website] does not provide any guarantees or warranties for any work performed. It is the responsibility of the homeowner to verify that the hired contractor has the necessary license and insurance required for the job. All persons depicted in photos or videos are actors or models and not the contractors listed on [this website].
+  </footer>
 </body>
 </html>
