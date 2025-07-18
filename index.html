@@ -22,8 +22,29 @@
       }
     }
   </script>
+  <style>
+    body::before {
+      content: "\1F9F1";
+      font-size: 50px;
+      opacity: 0.05;
+      position: fixed;
+      top: -25%;
+      left: -25%;
+      width: 200%;
+      height: 200%;
+      z-index: -1;
+      transform: rotate(-45deg);
+      background-repeat: repeat;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      grid-auto-rows: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: #999;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white text-gray-900 relative">
   <header class="bg-gray-900 text-white p-4 text-center text-xl font-bold animate-fadeIn">
     Professional Flooring Installation
   </header>
