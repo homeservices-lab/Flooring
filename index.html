@@ -5,72 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flooring Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="bg-white text-gray-900">
-  <header class="bg-gray-900 text-white p-4 text-center text-xl font-bold">
+  <header class="bg-gray-900 text-white p-4 text-center text-xl font-bold animate-fadeIn">
     Professional Flooring Installation
   </header>
 
-  <section class="p-6 text-center">
+  <section class="p-6 text-center animate-fadeIn">
     <h1 class="text-3xl font-bold mb-4">All Types of Flooring & Installation</h1>
     <p class="max-w-xl mx-auto text-gray-700">
       Flooring is our specialty — we are a professional flooring provider ready to realize your project of any size! Remember: the right floor, the right price, the right professionals.
     </p>
   </section>
 
-  <section class="grid md:grid-cols-2 gap-6 p-6">
-    <div>
-      <h2 class="text-2xl font-semibold mb-4">Our Specializations</h2>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold mb-1">🪵 Hardwood & Wood Flooring</h3>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>Solid hardwoods (exotic and domestic species)</li>
-          <li>Sanding and finishing of new or existing hardwood floors</li>
-          <li>Staircases</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold mb-1">🧱 Engineered & Synthetic</h3>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>Engineered wood</li>
-          <li>Bamboo</li>
-          <li>Laminate</li>
-          <li>Vinyl</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold mb-1">🧶 Soft Flooring</h3>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>Carpet</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold mb-1">🪨 Tile & Stone</h3>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>Tile and natural stone</li>
-          <li>Granite and countertops</li>
-        </ul>
-      </div>
-      <div class="mb-4">
-        <h3 class="text-lg font-semibold mb-1">🏠 Residential Projects</h3>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>All types of flooring for homes and apartments</li>
-          <li>+ more!</li>
-        </ul>
-      </div>
+  <section class="grid md:grid-cols-2 gap-10 p-6">
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-fadeIn">
+      <h3 class="text-xl font-semibold mb-2">🪵 Hardwood & Wood Flooring</h3>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>Solid hardwoods (exotic and domestic species)</li>
+        <li>Sanding and finishing of new or existing hardwood floors</li>
+        <li>Staircases</li>
+      </ul>
     </div>
-    <div class="flex justify-center items-center">
-      <div class="text-7xl">🏡</div>
+
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-fadeIn">
+      <h3 class="text-xl font-semibold mb-2">🧱 Engineered & Synthetic</h3>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>Engineered wood</li>
+        <li>Bamboo</li>
+        <li>Laminate</li>
+        <li>Vinyl</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-fadeIn">
+      <h3 class="text-xl font-semibold mb-2">🧶 Soft Flooring</h3>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>Carpet</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-fadeIn">
+      <h3 class="text-xl font-semibold mb-2">🪨 Tile & Stone</h3>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>Tile and natural stone</li>
+        <li>Granite and countertops</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md animate-fadeIn col-span-full">
+      <h3 class="text-xl font-semibold mb-2">🏠 Residential Projects</h3>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>All types of flooring for homes and apartments</li>
+        <li>+ more!</li>
+      </ul>
     </div>
   </section>
 
-  <section class="p-6 text-center">
-    <a href="tel:18662285733" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">
+  <section class="p-6 text-center animate-fadeIn">
+    <a href="tel:18662285733" class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition">
       📞 Call Now to Schedule
     </a>
   </section>
 
-  <footer class="text-xs text-gray-500 p-4 border-t text-center max-w-4xl mx-auto">
+  <footer class="text-xs text-gray-500 p-4 border-t text-center max-w-4xl mx-auto animate-fadeIn">
     Disclaimer: [This website] provides a free service to help homeowners connect with local service providers. All contractors/service providers are independent and [this website] does not provide any guarantees or warranties for any work performed. It is the responsibility of the homeowner to verify that the hired contractor has the necessary license and insurance required for the job. All persons depicted in photos or videos are actors or models and not the contractors listed on [this website].
   </footer>
 </body>
